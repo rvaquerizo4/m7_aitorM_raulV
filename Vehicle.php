@@ -97,9 +97,9 @@ class Vehicle{
         return km;
     }
 
-    function vehicleCreat(marca){
+    function vehicleCreat($marca){
         $cavalls = rand(int 0, int 100): int;
-        return "vehicle es ", $marca, "i té " $cavalls;
+        return "vehicle es ".$marca. "i té ".$cavalls;
     }
 
 }
