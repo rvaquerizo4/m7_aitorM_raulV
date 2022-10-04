@@ -92,6 +92,7 @@ class Vehicle{
         // TODO: Implement __toString() method.
     }
 
+ramaAitor
     function kmRecorregut(){
         $km = rand(int 0, int 100): int;
         return km;
@@ -102,5 +103,8 @@ class Vehicle{
         return "El vehicle es ", $marca, "i té " $cavalls;
     }
 
+=======
+ 
+main
 }
 ?>
