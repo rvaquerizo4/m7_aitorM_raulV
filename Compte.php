@@ -76,11 +76,12 @@ class Compte{
     }
 
 }
-    //function dades(){
-        $compte = new compte("Raul", "Vaquerizo", 1999);
-        //echo $this->Compte($nom_usuari.$cognom_usuari.$diners_inicials);
-        //return $this->Compte($nom_usuari.$cognom_usuari.$diners_inicials);
-    //}
+
+    $instancia = new Compte();
+
+    $compte = 'Compte';
+    $compte = new compte("Raul", "Vaquerizo", 1999);// new ClaseSencilla()
+
 
     function diners($diners_inicials){
         $dinero_quitado = (rand(100,5000));
