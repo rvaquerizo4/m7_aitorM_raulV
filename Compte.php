@@ -70,16 +70,17 @@ class Compte{
         $this->diners_finals = $diners_finals;
     }
 
-    public function __toString($nom_usuari,$cognom_usuari, $diners_inicials)
+    public function toString()
     {
-        return $nom_usuari." ".$cognom_usuari." i" .$diners_inicials;
+        return $this->$nom_usuari . " " . $this->$cognom_usuari . " i" . $this->$diners_inicials;
     }
 
 }
-    function dades(){
-        echo $this->Compte($nom_usuari.$cognom_usuari.$diners_inicials);
-        return $this->Compte($nom_usuari.$cognom_usuari.$diners_inicials);
-    }
+    //function dades(){
+        $compte = new compte("Raul", "Vaquerizo", 1999);
+        //echo $this->Compte($nom_usuari.$cognom_usuari.$diners_inicials);
+        //return $this->Compte($nom_usuari.$cognom_usuari.$diners_inicials);
+    //}
 
     function diners($diners_inicials){
         $dinero_quitado = (rand(100,5000));
