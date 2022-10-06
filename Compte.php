@@ -3,6 +3,7 @@ class Compte{
     private $nom_usuari;
     private $cognom_usuari;
     private $diners_inicials;
+    private $diners_finals;
 
     /**
      * @return mixed
@@ -36,6 +37,7 @@ class Compte{
         $this->cognom_usuari = $cognom_usuari;
     }
 
+
     /**
      * @return mixed
      */
@@ -52,6 +54,22 @@ class Compte{
         $this->diners_inicials = $diners_inicials;
     }
 
+     /**
+     * @return mixed
+     */
+    public function getDinersFinals()
+    {
+        return $this->diners_finals;
+    }
+
+    /**
+     * @param mixed $diners_finals
+     */
+    public function setDinersFinals($diners_finals)
+    {
+        $this->diners_finals = $diners_finals;
+    }
+
     public function __toString($nom_usuari,$cognom_usuari, $diners_inicials)
     {
         return $nom_usuari." ".$cognom_usuari." i" .$diners_inicials;
@@ -59,20 +77,20 @@ class Compte{
 
 }
     function dades(){
-        echo $this->Compte(nom_usuari.cognom_usuari.diners_inicials);
-        return $this->Compte(nom_usuari.cognom_usuari.diners_inicials);
+        echo $this->Compte($nom_usuari.$cognom_usuari.$diners_inicials);
+        return $this->Compte($nom_usuari.$cognom_usuari.$diners_inicials);
     }
 
     function diners($diners_inicials){
         $dinero_quitado = (rand(100,5000));
-        $diners_inicials =- $dinero_quitado;
-        echo $diners_inicials;
-        return $diners_inicials;
+        $diners_finals = $diners_finals - $dinero_quitado;
+        echo $diners_finals;
+        return $diners_finals;
     }
     function diners_finals($diners_finals)
     {
         $dinero_añadido = (rand(100, 5000));
-        $diners_inicials = -$dinero_añadido;
+        $diners_finals = $diners_finals + $dinero_añadido;
         echo $diners_finals;
         return $diners_finals;
     }
