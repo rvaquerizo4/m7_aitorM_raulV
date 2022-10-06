@@ -59,13 +59,15 @@ class Compte{
     }
 
     public function treurediners($var){
-        $aux = $diners - $var;
-        $compte->setDiners($aux);
-        return $aux;
+       $aux3 = $this->getDiners();
+        $aux = $aux3 - $var2;
+        $this->setDiners($aux2);
+        return $aux2;
     }
     public function afegirDiners($var2){
-        $aux2 = $diners - $var2;
-        $compte->setDiners($aux2);
+        $aux3 = $this->getDiners();
+        $aux2 = $aux3 + $var2;
+        $this->setDiners($aux2);
         return $aux2;
     }
 
@@ -74,7 +76,7 @@ class Compte{
     $instancia = new Compte();
     $compte = new Compte("Raul", "Vaquerizo", 1999);
 
-    afegirDiners(1000);                       
+    $compte->afegirDiners(1000);                       
     echo $compte->getNomUsuari();
     echo $compte->getCognomUsuari();
     echo $compte->getDiners();
