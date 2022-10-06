@@ -2,8 +2,7 @@
 class Compte{
     private $nom_usuari;
     private $cognom_usuari;
-    private $diners_inicials;
-    private $diners_finals;
+    private $diners;
 
     /**
      * @return mixed
@@ -41,59 +40,43 @@ class Compte{
     /**
      * @return mixed
      */
-    public function getDinersInicials()
+    public function getDiners()
     {
-        return $this->diners_inicials;
+        return $this->diners;
     }
 
     /**
-     * @param mixed $diners_inicials
+     * @param mixed $diners
      */
-    public function setDinersInicials($diners_inicials)
+    public function setDiners($diners)
     {
-        $this->diners_inicials = $diners_inicials;
-    }
-
-     /**
-     * @return mixed
-     */
-    public function getDinersFinals()
-    {
-        return $this->diners_finals;
-    }
-
-    /**
-     * @param mixed $diners_finals
-     */
-    public function setDinersFinals($diners_finals)
-    {
-        $this->diners_finals = $diners_finals;
+        $this->diners = $diners;
     }
 
     public function toString()
     {
-        return $this->$nom_usuari . " " . $this->$cognom_usuari . " i" . $this->$diners_inicials;
+        return $this->$nom_usuari . " " . $this->$cognom_usuari . " i" . $this->$diners;
+    }
+
+    public function treurediners($var){
+        $aux = $diners - $var;
+        $compte->setDiners($aux);
+        return $aux;
+    }
+    public function afegirDiners($var2){
+        $aux2 = $diners - $var2;
+        $compte->setDiners($aux2);
+        return $aux2;
     }
 
 }
 
     $instancia = new Compte();
+    $compte = new Compte("Raul", "Vaquerizo", 1999);
 
-    $compte = 'Compte';
-    $compte = new compte("Raul", "Vaquerizo", 1999);// new ClaseSencilla()
+    afegirDiners(1000);                       
+    echo $compte->getNomUsuari();
+    echo $compte->getCognomUsuari();
+    echo $compte->getDiners();
 
-
-    function diners($diners_inicials){
-        $dinero_quitado = (rand(100,5000));
-        $diners_finals = $diners_finals - $dinero_quitado;
-        echo $diners_finals;
-        return $diners_finals;
-    }
-    function diners_finals($diners_finals)
-    {
-        $dinero_añadido = (rand(100, 5000));
-        $diners_finals = $diners_finals + $dinero_añadido;
-        echo $diners_finals;
-        return $diners_finals;
-    }
 ?>
