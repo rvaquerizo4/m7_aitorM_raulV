@@ -18,26 +18,13 @@
     $consulta = "SELECT * FROM product";
 
     $product = mysqli_query($connexio, $consulta);
-// Check connection
-        if($connexio === false){
-            die("ERROR: Could not connect. ". mysqli_connect_error());
-        }
+    
+    $Name = $_REQUEST['Name'];
+    $Description = $_REQUEST['Description'];
+    $price = $_REQUEST['price'];
 
-        $Name = $_REQUEST['Name'];
-        $Description = $_REQUEST['Description'];
-        $price = $_REQUEST['price'];
+    $sql = "INSERT INTO product VALUES ('$Name','$Description','$price')";
 
-        $sql = "INSERT INTO product VALUES ('$Name','$Description','$price')";
-
-        if(mysqli_query($connexio, $sql)){
-            echo "<h3>data stored in a database successfully.". " Please browse your localhost php my admin". " to view the updated data</h3>";
-            echo nl2br("\n$Name\n $Description\n ". "$price\n");
-        } else{
-            echo "ERROR: Hush! Sorry $sql. ". mysqli_error($connexio);
-        }
- 
-    // Close connection
-    mysqli_close($connexio);
 ?>
  <table class="table">
     <thead>
@@ -55,12 +42,12 @@
           <td><?php echo $products['Name'] ?></td>
           <td><?php echo $products['Description'] ?></td>
           <td><?php echo $products['price'] ?></td>
-          <td><button type="button" class="btn btn-outline-primary">Edit</button></td>
-          <td><button type="button" class="btn btn-outline-danger">Delete</button></td>
+          <td><a href="edit.php?id=<?php echo $products['NumID']?>"><button type="button" class="btn btn-outline-primary">Edit</button></a></td>
+          <td><a href="delete.php?id=<?php echo $products['NumID']?>"><button type="button" class="btn btn-outline-danger">Delete</button></a></td>
         </tr>
       <?php } ?>
     </tbody>
   </table>
-</body>
+  <button onclick="location.href='formulario.php'">Añadir un producto</button>
+  </body>
 </html>
-   
