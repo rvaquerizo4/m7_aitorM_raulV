@@ -18,12 +18,6 @@
     $consulta = "SELECT * FROM product";
 
     $product = mysqli_query($connexio, $consulta);
-    
-    $Name = $_REQUEST['Name'];
-    $Description = $_REQUEST['Description'];
-    $price = $_REQUEST['price'];
-
-    $sql = "INSERT INTO product VALUES ('$Name','$Description','$price')";
 
 ?>
  <table class="table">

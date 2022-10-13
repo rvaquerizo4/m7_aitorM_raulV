@@ -5,7 +5,7 @@
 </head>
   <body>
     <h1>Storing Form data in Database</h1>
-      <form action="index.php" method="post">
+    <form action="add_product.php" method="POST">
   <p>
     <label for="Name">Name:</label>
     <input type="text" name="Name" id="Name">
