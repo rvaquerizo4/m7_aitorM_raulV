@@ -19,15 +19,15 @@
             die("ERROR: Could not connect. ". mysqli_connect_error());
         }
 
-        $Fname = $_REQUEST['Fname'];
-        $Fdescription = $_REQUEST['Fdescription'];
-        $Fprice = $_REQUEST['Fprice'];
+        $Name = $_REQUEST['Name'];
+        $Description = $_REQUEST['Description'];
+        $price = $_REQUEST['price'];
 
-        $sql = "INSERT INTO product VALUES ('$Fname','$Fdescription','$Fprice')";
+        $sql = "INSERT INTO product VALUES ('$Name','$Description','$price')";
 
         if(mysqli_query($connexio, $sql)){
             echo "<h3>data stored in a database successfully.". " Please browse your localhost php my admin". " to view the updated data</h3>";
-            echo nl2br("\n$Fname\n $Fdescription\n ". "$Fprice\n");
+            echo nl2br("\n$Name\n $Description\n ". "$price\n");
         } else{
             echo "ERROR: Hush! Sorry $sql. ". mysqli_error($connexio);
         }
@@ -59,4 +59,4 @@
   </table>
 </body>
 </html>
-               
+             
