@@ -7,18 +7,18 @@
   <h1>Storing Form data in Database</h1>
     <form action="index.php" method="post">
 <p>
-  <label for="Fname">Name:</label>
-  <input type="text" name="Fname" id="Fname">
+  <label for="Name">Name:</label>
+  <input type="text" name="Name" id="Name">
 </p>
 
 <p>
-  <label for="Fdescription">Description</label>
-  <input type="text" name="Fdescription" id="Fdescription">
+  <label for="Description">Description</label>
+  <input type="text" name="Description" id="Description">
 </p>
 
 <p>
-  <label for="Fprice">Price</label>
-  <input type="text" name="Fprice" id="Fprice">
+  <label for="price">Price</label>
+  <input type="text" name="price" id="Fpprice">
 </p>
   <input type="submit" value="Submit">
 </form>
